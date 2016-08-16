@@ -1,29 +1,3 @@
-[
-  {"North Europe":
-    [
-      {"Country":"United Kingdom","FatConsumption":15845.780000000017,"CarboConsumption":29576.47999999998,"ProteinConsumption":7874.850000000004},
-      {"Country":"Denmark","FatConsumption":576.6999999999999,"CarboConsumption":868.1000000000003,"ProteinConsumption":298.2},
-      {"Country":"Sweden","FatConsumption":97.5,"CarboConsumption":295.8,"ProteinConsumption":39.800000000000004},
-      {"Country":"Norway","FatConsumption":0.2,"CarboConsumption":11.8,"ProteinConsumption":0.6}
-    ]
-  },
-  {"Central Europe":
-    [
-     {"Country":"France","FatConsumption":324530.66943299846,"CarboConsumption":713329.6969999924,"ProteinConsumption":195797.77080000166},
-     {"Country":"Belgium","FatConsumption":523.1409,"CarboConsumption":980.6900000000002,"ProteinConsumption":226.466},
-     {"Country":"Germany","FatConsumption":1293.4299999999998,"CarboConsumption":2637.9900000000002,"ProteinConsumption":1104.95},
-     {"Country":"Switzerland","FatConsumption":694.28,"CarboConsumption":1335.31,"ProteinConsumption":391.1},
-     {"Country":"Netherlands","FatConsumption":276.9,"CarboConsumption":697.5,"ProteinConsumption":104.97999999999999}
-    ]
-  },
-  {"South Europe":
-    [
-     {"Country":"Portugal","FatConsumption":3334.0399999999986,"CarboConsumption":8764.760000000007,"ProteinConsumption":1895.44},
-     {"Country":"Greece","FatConsumption":0,"CarboConsumption":0,"ProteinConsumption":0},
-     {"Country":"Italy","FatConsumption":562.85,"CarboConsumption":2265.84,"ProteinConsumption":349.50000000000006},
-     {"Country":"Spain","FatConsumption":2034.45,"CarboConsumption":689.1600000000002,"ProteinConsumption":232.56},
-     {"Country":"Croatia","FatConsumption":0,"CarboConsumption":0,"ProteinConsumption":0},
-     {"Country":"Albania","FatConsumption":0,"CarboConsumption":0,"ProteinConsumption":0}
-    ]
-  }
-]
+[{"Region":"North Europe","FatConsumption":16520.18000000002,"CarboConsumption":30752.17999999998,"ProteinConsumption":8213.450000000004},
+{"Region":"Central Europe","FatConsumption":327318.4203329985,"CarboConsumption":718981.1869999924,"ProteinConsumption":197625.26680000167},
+{"Region":"South Europe","FatConsumption":5931.339999999998,"CarboConsumption":11719.760000000007,"ProteinConsumption":2477.5}]

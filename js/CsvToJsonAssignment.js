@@ -32,8 +32,8 @@ output.readable=true;
 output.writable=true;
 
 var output2=fs.createWriteStream('../europeCountryConsumption.json');
-output.readable=true;
-output.writable=true;
+output2.readable=true;
+output2.writable=true;
 
 //------------------calling callback when lineReader starts reading file line by line--------
 lineReader.on('line',function(line)
@@ -263,34 +263,61 @@ lineReader.on('close',function(){
   }
 
   //------------------------------Storing north europian details in an array--------------------
-  europe_Countries=[];
+  //europe_Countries=[];
+  obj={};
+  obj["Region"]=europeArea[0];
+  obj["FatConsumption"]=0.0;
+  obj["CarboConsumption"]=0.0;
+  obj["ProteinConsumption"]=0.0;
   for(i=0;i<north_europe.length;i++)
   {
-    europe_Countries.push(europeCountryConsumption[i]);
+    //europe_Countries.push(europeCountryConsumption[i]);
+    obj["FatConsumption"]=obj["FatConsumption"]+europeCountryConsumption[i]["FatConsumption"];
+    obj["CarboConsumption"]=obj["CarboConsumption"]+europeCountryConsumption[i]["CarboConsumption"];
+    obj["ProteinConsumption"]=obj["ProteinConsumption"]+europeCountryConsumption[i]["ProteinConsumption"];
   }
-  obj={};
-  obj[europeArea[0]]=europe_Countries;
+  //console.log(JSON.stringify(obj));
+  //obj[europeArea[0]]=europe_Countries;
   finalAreaConsumption.push(obj); //Pushing the north european details under North Europe key of finalAreaConsumption object array.
 
   //------------------------------Storing central europian details in an array--------------------
-  europe_Countries=[];
+  //europe_Countries=[];
+  obj={};
+  obj["Region"]=europeArea[1];
+  obj["FatConsumption"]=0.0;
+  obj["CarboConsumption"]=0.0;
+  obj["ProteinConsumption"]=0.0;
   for(i=north_europe.length;i<(north_europe.length+central_europe.length);i++)
   {
-    europe_Countries.push(europeCountryConsumption[i]);
+    //europe_Countries.push(europeCountryConsumption[i]);
+    obj["FatConsumption"]=obj["FatConsumption"]+europeCountryConsumption[i]["FatConsumption"];
+    obj["CarboConsumption"]=obj["CarboConsumption"]+europeCountryConsumption[i]["CarboConsumption"];
+    obj["ProteinConsumption"]=obj["ProteinConsumption"]+europeCountryConsumption[i]["ProteinConsumption"];
   }
-  obj={};
-  obj[europeArea[1]]=europe_Countries;
+  //console.log(JSON.stringify(obj));
+  //obj={};
+  //obj[europeArea[1]]=europe_Countries;
   finalAreaConsumption.push(obj); //Pushing the central european details under Central Europe key of finalAreaConsumption object array.
 
     //------------------------------Storing south europian details in an array--------------------
-  europe_Countries=[];
+  //europe_Countries=[];
+  obj={};
+  obj["Region"]=europeArea[2];
+  obj["FatConsumption"]=0.0;
+  obj["CarboConsumption"]=0.0;
+  obj["ProteinConsumption"]=0.0;
   for(i=(north_europe.length+central_europe.length);i<(north_europe.length+central_europe.length+south_europe.length);i++)
   {
-    europe_Countries.push(europeCountryConsumption[i]);
+    //europe_Countries.push(europeCountryConsumption[i]);
+    obj["FatConsumption"]=obj["FatConsumption"]+europeCountryConsumption[i]["FatConsumption"];
+    obj["CarboConsumption"]=obj["CarboConsumption"]+europeCountryConsumption[i]["CarboConsumption"];
+    obj["ProteinConsumption"]=obj["ProteinConsumption"]+europeCountryConsumption[i]["ProteinConsumption"];
   }
-  obj={};
-  obj[europeArea[2]]=europe_Countries;
+  //console.log(JSON.stringify(obj));
+  //obj={};
+  //obj[europeArea[2]]=europe_Countries;
   finalAreaConsumption.push(obj); //Pushing the south european details under South Europe key of finalAreaConsumption object array.
+  console.log(JSON.stringify(finalAreaConsumption));
 
 //--------------Writing final object array in JSON format with .json extension------------------
   output.write(JSON.stringify(countryConsumption));
